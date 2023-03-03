@@ -496,7 +496,6 @@
               id="input-email" 
               name="input-email" 
               placeholder="E-mail" 
-              autofocus 
               autocomplete="email">
               <button class="btn-footer" type="submit">
                 <p class="text-footer-button">Subscribe</p>
@@ -522,22 +521,35 @@
           <div class="modal-form-field">
             <label class="modal-form-label" for="name">Name</label>
             <input class="modal-form-input" type="text" name="name" id="name" autocomplete="name" autofocus>
+            <svg class="modal-icon">
+              <use href="./img/icons.svg#icon-person"></use>
+            </svg>
           </div>
           <div class="modal-form-field">
             <label class="modal-form-label" for="phone">Phone</label>
             <input class="modal-form-input" type="tel" name="phone" id="phone" autocomplete="tel">
+            <svg class="modal-icon">
+              <use href="./img/icons.svg#icon-phone"></use>
+            </svg>
           </div>
           <div class="modal-form-field">
             <label class="modal-form-label" for="email">Email</label>
             <input class="modal-form-input" type="email" name="email" id="email" autocomplete="email">
+            <svg class="modal-icon">
+              <use href="./img/icons.svg#icon-email"></use>
+            </svg>
           </div>
           <div class="modal-form-field">
             <label class="modal-form-label" for="comment">Comment</label>
-            <textarea name="comment" id="comment" rows="8" placeholder="Text input"></textarea>
+            <textarea class="modal-form-textarea" name="comment" id="comment" rows="8" placeholder="Text input"></textarea>
           </div>
-          <div class="modal-form-field">
-            <input type="checkbox" value="privacy" name="privacy" id="privacy">
-            <label class="modal-form-label" for="privacy">I accept the terms and conditions of the <span>Privacy Policy</span></label>
+          <div class="modal-checkbox">
+            <input class="modal-checkbox-input" type="checkbox" value="privacy" name="privacy" id="privacy">
+            <!-- <svg class="modal-checkbox-icon">
+              <use href="./img/icons.svg#icon-default"></use>
+            </svg> -->
+            <span class="modal-checkbox-icon"></span>
+            <label class="modal-checkbox-text" for="privacy">I accept the terms and conditions of the <span>Privacy Policy</span></label>
           </div>  
           <button class="hero-button" type="submit">Send</button>
         </form>

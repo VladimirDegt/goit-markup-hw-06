@@ -2,6 +2,12 @@
 https://github.com/sindresorhus/modern-normalize
 https://cdnjs.com/libraries/modern-normalize
 
+//! Для генерації SVG-спрайту використовуй сервіс Icomoon.
+https://icomoon.io/
+
+//! Для оптимізації створеного SVG-спрайту використовуй сервіс svgomg.
+https://jakearchibald.github.io/svgomg/
+
 //? паттерн скрытия элемента
 .visually-hidden {
     position: absolute;
@@ -26,3 +32,7 @@ const { height: pageHeaderHeight } = document
 .getBoundingClientRect();
 
 document.body.style.paddingTop = `${pageHeaderHeight}px`;
+
+
+//? сбросить все свойства от браузера
+appearance: none;
