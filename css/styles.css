@@ -732,7 +732,8 @@ header {
     margin: 0;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left: 34px;
+    padding-left: 38px;
+    outline: none;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transition: border var(--animation-time) var(--animation-function);
@@ -758,32 +759,46 @@ header {
     transition: fill var(--animation-time) var(--animation-function);
 }
 
-.modal-form-input:hover,
 .modal-form-input:focus {
     border: 1px solid var(--accent-text-color);
 }
 
-.modal-form-input:hover + .modal-icon,
 .modal-form-input:focus + .modal-icon {
     fill: var(--accent-text-color);
 }
 
-.modal-icon:hover,
 .modal-icon:focus {
     fill: var(--accent-text-color);
+}
+
+.modal-form-field-comment {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.modal-form-textarea::placeholder {
+    color: #8E8F99;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
 }
 
 .modal-form-textarea {
     resize: none;
     padding-top: 8px;
     padding-left: 16px;
-    margin-bottom: 16px;
-    color: #8E8F99;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+}
+
+.modal-form-textarea:focus {
+    border: 1px solid var(--accent-text-color);
 }
 
 .modal-checkbox {
@@ -793,24 +808,20 @@ header {
 }
 
 .modal-checkbox-input {
+    display: block;
+    width: 16px;
+    height: 16px;
     position: absolute;
     appearance: none;
 }
 
-/* .modal-checkbox-icon {
+.modal-checkbox-icon {
     width: 16px;
     height: 16px;
-} */
-
-.modal-checkbox-icon {
-    /* position: absolute; */
-    width: 1em;
-    height: 1em;
     background-image: url(../img/default.svg);
 }
 
-.modal-checkbox-input:checked + .modal-checkbox-icon,
-.modal-checkbox-input:focus + .modal-checkbox-icon {
+.modal-checkbox-input:checked + .modal-checkbox-icon {
     background-image: url(../img/click.svg);
 }
 
@@ -824,7 +835,6 @@ header {
     letter-spacing: 0.04em;
 }
 
-.modal-checkbox-text span {
+.modal-checkbox-text a {
     color: rgba(77, 90, 229, 1);
-    text-decoration: underline;
 }
