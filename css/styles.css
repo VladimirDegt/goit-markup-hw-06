@@ -579,7 +579,7 @@ header {
 }
 
 .footer-form {
-    margin-left: 80px;
+    margin-left: auto;
 }
 
 .footer-form > p {
@@ -598,8 +598,11 @@ header {
     display: flex;
     width: 165px;
     height: 40px;
-    padding-left: 24px;
+    padding: 8px 24px;
     align-items: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    letter-spacing: 0.04em; 
     border: none;
     border-radius: 4px;
     background-color: var(--accent-text-color);
@@ -627,16 +630,11 @@ header {
     border-radius: 4px;
 }
 
-.text-footer-button {
-    margin-right: 16px;
-    color: var(--primary-color);
-    font-weight: 500;
-    letter-spacing: 0.04em;  
-}
 
 .icon-footer-form {
     width: 24px;
     height: 24px;
+    margin-left: 16px;
 }
 
 .icon-send {
@@ -665,7 +663,6 @@ header {
 .modal {
     position: absolute;
     min-width: 408px;
-    min-height: 576px;
     top: 50%;
     left: 50%;
     padding: 72px 24px 24px 24px;
@@ -684,31 +681,39 @@ header {
 
 .bnt-close {
     position: absolute;
+    padding: 0;
     border: none;
     top: 24px;
     right: 24px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-    background-color: #FCFCFC;
+    border-radius: 50%;
+    background-color: var(--border-color-header);
+    transition: background-color var(--animation-time) var(--animation-function);
+}
+
+.bnt-close:hover,
+.bnt-close:focus {
+    background-color: var(--active-color);
 }
 
 .icon-close {
-    width: 24px;
-    height: 24px;
-    fill: #e7e9fc;
+    width: 8px;
+    height: 8px;
+    fill: #000000;
     transition: fill var(--animation-time) var(--animation-function);
 }
 
-.icon-close:hover,
-.icon-close:focus {
-    fill: var(--active-color);
-}
-
-.modal-form{
-    width: 360px;
-    margin: 16px auto 24px auto;
+.bnt-close:hover .icon-close,
+.bnt-close:focus .icon-close {
+    fill: var(--primary-color);
 }
 
 .modal-text {
+    display: block;
+    margin-bottom: 16px;
+    text-align: center;
     color: var(--second-background-title);
     font-weight: 500;
 }
@@ -739,24 +744,37 @@ header {
     transition: border var(--animation-time) var(--animation-function);
 }
 
-.modal-form .hero-button {
+.btn-modal {
     width: 169px;
+    padding: 16px 32px;
     margin-left: 95px;
+    border: none;
+    border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: var(--primary-color);
-    font-family: "Roboto", sans-serif;
+    background-color: var(--accent-text-color);
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.04em;   
+    letter-spacing: 0.04em;
+    transition: background-color var(--animation-time) var(--animation-function);   
+}
+
+.btn-modal:hover,
+.btn-modal:focus {
+    background-color:var(--active-color);
 }
 
 .modal-icon {
     position: absolute;
-    top: 30px;
+    top: 26px;
     left: 16px;
     width: 18px;
-    height: 18px;
+    height: 24px;
     transition: fill var(--animation-time) var(--animation-function);
+}
+.modal-icon-properties {
+    width: 18px;
+    height: 24px;
 }
 
 .modal-form-input:focus {
